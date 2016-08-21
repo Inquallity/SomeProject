@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navService"
+        android:enabled="true"
+        android:title="@string/services.title" />
+    <item
+        android:id="@+id/navBroadcast"
+        android:enabled="false"
+        android:title="@string/broadcasts.title" />
+    <item
+        android:id="@+id/navSqlite"
+        android:enabled="true"
+        android:title="@string/sqlite.title" />
+    <item
+        android:id="@+id/navGithub"
+        android:enabled="true"
+        android:title="@string/github.title" />
+    <item
+        android:id="@+id/navThreadPool"
+        android:enabled="true"
+        android:title="@string/thread_pool" />
+    <item
+        android:id="@+id/navCustomView"
+        android:enabled="false"
+        android:title="@string/custom_view" />
+    <item
+        android:id="@+id/navPhoneInfo"
+        android:enabled="false"
+        android:title="@string/phone_info" />
+    <item
+        android:id="@+id/navBluetooth"
+        android:enabled="false"
+        android:title="@string/bluetooth" />
+    <item
+        android:id="@+id/navPushMessages"
+        android:enabled="false"
+        android:title="@string/push_messages" />
+    <item
+        android:id="@+id/navCamera"
+        android:enabled="false"
+        android:title="@string/camera" />
+    <item
+        android:id="@+id/navMaps"
+        android:enabled="false"
+        android:title="@string/maps" />
+    <item
+        android:id="@+id/navSignIn"
+        android:enabled="false"
+        android:title="@string/sign_in" />
+    <item
+        android:id="@+id/navSockets"
+        android:enabled="false"
+        android:title="@string/sockets" />
+</menu>

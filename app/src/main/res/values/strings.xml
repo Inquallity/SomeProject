@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">SomeProject</string>
+    <string name="drawer_closed">Drawer closed</string>
+    <string name="drawer_opened">Drawer opened</string>
+    <string name="main.services_playground">Песочница для сервисов</string>
+    <string name="services.start_service">Запустить сервис</string>
+    <string name="services.stop_service">Остановить сервис</string>
+    <string name="services.start_intent_service">Запустить Intent-сервис</string>
+    <string name="services.stop_intent_service">Остановить Intent-service</string>
+    <string name="clear">Clear</string>
+    <string name="services.service_started">Сервис запущен</string>
+    <string name="with_binder">with Binder</string>
+    <string name="with_messenger">with Messenger</string>
+    <string name="services.title">Service</string>
+    <string name="sqlite.title">SQLite</string>
+    <string name="broadcasts.title">Broadcasts</string>
+    <string name="main.sqlite_playground">Песочница для SQLite</string>
+    <string name="create">Создать</string>
+    <string name="name">Имя</string>
+    <string name="surname">Фамилия</string>
+    <string name="age">Возраст</string>
+    <string name="email">Email</string>
+    <string name="insert_result">Вставлено %d строк</string>
+    <string name="github.title">Github repos</string>
+    <string name="thread_pool">Thread pool</string>
+    <string name="custom_view">Custom View</string>
+    <string name="phone_info">Phone info</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="camera">Camera</string>
+    <string name="maps">Maps</string>
+    <string name="sign_in">Google sign in</string>
+    <string name="push_messages">Push messages</string>
+    <string name="sockets">Sockets</string>
+</resources>
