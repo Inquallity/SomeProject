@@ -21,7 +21,7 @@
     <string name="age">Возраст</string>
     <string name="email">Email</string>
     <string name="insert_result">Вставлено %d строк</string>
-    <string name="github.title">Github repos</string>
+    <string name="github.title">Github emojis</string>
     <string name="thread_pool">Thread pool</string>
     <string name="custom_view">Custom View</string>
     <string name="phone_info">Phone info</string>
@@ -31,4 +31,5 @@
     <string name="sign_in">Google sign in</string>
     <string name="push_messages">Push messages</string>
     <string name="sockets">Sockets</string>
+    <string name="loading_view">Loading view</string>
 </resources>

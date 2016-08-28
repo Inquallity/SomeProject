@@ -1,5 +1,7 @@
 package com.example.inquallity.someproject.activity;
 
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,22 +12,21 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.MenuItem;
 
 import com.example.inquallity.someproject.R;
-import com.example.inquallity.someproject.fragment.GithubEmojisFragment;
-import com.example.inquallity.someproject.fragment.ServiceFragment;
-import com.example.inquallity.someproject.fragment.SqliteFragment;
-import com.example.inquallity.someproject.fragment.ThreadsFragment;
+import com.example.inquallity.someproject.utils.NavigationFlow;
+import com.example.inquallity.someproject.view.MainView;
 
 /**
  * @author Maksim Radko
  */
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements MainView {
 
     private DrawerLayout mDrawerLayout;
 
     private NavigationView mNavigationView;
+
+    private NavigationFlow mNavigationFlow;
 
     @NonNull
     public static Intent makeIntent(@NonNull Context context) {
@@ -33,33 +34,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.navService:
-                getFragmentManager().beginTransaction()
-                        .replace(R.id.flContainer, new ServiceFragment())
-                        .commit();
-                break;
-            case R.id.navBroadcast:
-                break;
-            case R.id.navSqlite:
-                getFragmentManager().beginTransaction()
-                        .replace(R.id.flContainer, new SqliteFragment())
-                        .commit();
-                break;
-            case R.id.navGithub:
-                getFragmentManager().beginTransaction()
-                        .replace(R.id.flContainer, new GithubEmojisFragment())
-                        .commit();
-                break;
-            case R.id.navThreadPool:
-                getFragmentManager().beginTransaction()
-                        .replace(R.id.flContainer, new ThreadsFragment())
-                        .commit();
-                break;
-        }
+    public void show(Fragment fragment) {
+        getFragmentManager().beginTransaction()
+                .replace(R.id.flContainer, fragment)
+                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                .commit();
         mDrawerLayout.closeDrawers();
-        return true;
+    }
+
+    @Override
+    public void showLoadingActivity() {
+        startActivity(LoadingActivity.makeIntent(this));
     }
 
     @Override
@@ -73,6 +58,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         final ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, R.string.drawer_opened, R.string.drawer_closed);
         mDrawerLayout.addDrawerListener(toggle);
         toggle.syncState();
-        mNavigationView.setNavigationItemSelectedListener(this);
+
+        mNavigationFlow = new NavigationFlow(this);
+        mNavigationView.setNavigationItemSelectedListener(mNavigationFlow);
     }
 }

@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 
 import com.example.inquallity.someproject.R;
 import com.example.inquallity.someproject.adapter.holder.EmojiViewHolder;
-import com.example.inquallity.someproject.model.Emoji;
 
 import java.util.Collections;
 import java.util.List;
